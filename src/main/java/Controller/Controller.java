@@ -14,8 +14,7 @@ public class Controller {
 
         int act = attributeChecker(input);
 
-        //String city = "New York";
-
+        
         if (act == -1) {
             ErrInfo.showErrInfo();
         }
@@ -74,8 +73,7 @@ public class Controller {
     private static void getWeather(String city, int forecastType) {
         try {
             HttpClient.getApiWeatherInfo(city, forecastType);
-            //HttpClient.getApiWeatherInfo("Rome", 2);
-
+  
         } catch (IOException e) {
             e.printStackTrace();
         }
